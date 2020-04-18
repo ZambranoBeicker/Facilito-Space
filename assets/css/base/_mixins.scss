@@ -1,0 +1,59 @@
+@mixin change-size($height,$width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin absolute($position,$left,$right,$bottom,$top) {
+    position: $position;
+    right: $right;
+    left: $left;
+    top: $top;
+    bottom: $bottom;
+}
+
+@mixin margin($left,$right,$top,$bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+    margin-right: $right;
+    margin-left: $left;
+}
+
+@mixin border($value:true,$px,$rpx,$color) {
+border: $px solid $color;
+    @if $value {
+        border-radius: $rpx;
+    }
+}
+
+@mixin font($family,$size,$color) {
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+}
+
+@mixin flex($flex,$justify,$wrap:true) {
+    display: flex;
+    justify-content: $justify;
+
+    @if $wrap {
+        flex-wrap: wrap;
+    }
+}
+
+@mixin grid($c-size,$r-size,$r-num,$c-num) {
+    display: grid;
+    grid-template-columns: repeat($c-num,$c-size);
+    grid-template-rows: repeat($r-num,$r-size);
+}
+
+@mixin grid-extension($r-init,$r-end,$c-init,$c-end) {
+    grid-column:$c-init/$c-end;
+    grid-row:$r-init/r-$end;
+}
+
+@mixin padding($left,$right,$top,$bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+    padding-right: $right;
+    padding-left: $left;   
+}
