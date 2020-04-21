@@ -40,15 +40,17 @@ border: $px solid $color;
     }
 }
 
-@mixin grid($c-size,$r-size,$r-num,$c-num) {
+@mixin grid($c-size,$c-num,$r-size,$r-num) {
     display: grid;
     grid-template-columns: repeat($c-num,$c-size);
     grid-template-rows: repeat($r-num,$r-size);
 }
 
 @mixin grid-extension($r-init,$r-end,$c-init,$c-end) {
-    grid-column:$c-init/$c-end;
-    grid-row:$r-init/r-$end;
+    grid-row-sart:$r-init;
+    grid-row-end:$r-end;
+    grid-column-start:$c-init;
+    grid-column-end:$c-end;
 }
 
 @mixin padding($left,$right,$top,$bottom) {

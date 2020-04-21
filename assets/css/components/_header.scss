@@ -4,9 +4,13 @@
     background: $background-second;
     color: $color-undefined;
     @include marPad(true,true);
+    @include grid(1fr,12,0,0);
+
+    
 
 }
 
 .header__title{
     @include marPad(true,10px);
+    @include grid-extension(0,0,1,3);
 }
