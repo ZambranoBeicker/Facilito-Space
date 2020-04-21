@@ -31,11 +31,11 @@ border: $px solid $color;
     color: $color;
 }
 
-@mixin flex($flex,$justify,$wrap:true) {
+@mixin flex($justify,$wrap) {
     display: flex;
     justify-content: $justify;
 
-    @if $wrap {
+    @if $wrap==true {
         flex-wrap: wrap;
     }
 }
