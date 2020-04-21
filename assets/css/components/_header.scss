@@ -3,4 +3,10 @@
 .header{
     background: $background-second;
     color: $color-undefined;
+    @include marPad(true,true);
+
+}
+
+.header__title{
+    @include marPad(true,10px);
 }

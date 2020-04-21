@@ -18,7 +18,7 @@
     margin-left: $left;
 }
 
-@mixin border($value:true,$px,$rpx,$color) {
+@mixin border($value,$px,$rpx,$color) {
 border: $px solid $color;
     @if $value {
         border-radius: $rpx;
@@ -59,13 +59,13 @@ border: $px solid $color;
 }
 
 @mixin marPad($margin, $padding) {
-    @if $margin {
+    @if $margin==true {
         margin: 0;
     }@else{
         margin: $margin;
     }
 
-    @if $padding{
+    @if $padding==true{
         padding: 0;
     }@else{
         padding: $padding;
