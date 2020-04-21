@@ -57,3 +57,19 @@ border: $px solid $color;
     padding-right: $right;
     padding-left: $left;   
 }
+
+@mixin marPad($margin, $padding) {
+    @if $margin {
+        margin: 0;
+    }@else{
+        margin: $margin;
+    }
+
+    @if $padding{
+        padding: 0;
+    }@else{
+        padding: $padding;
+    }
+
+
+}
