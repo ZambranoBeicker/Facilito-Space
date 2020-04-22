@@ -16,10 +16,28 @@
         
     }
 
+    
+    &__description{
+        @include grid-extension(0,0,1,4);
+        @include grid(0,0,1fr,3);
+    }
+
+
+    &__title{
+        font-size: $font-size-title;
+    }
+
+
+    &__paragraph{
+        font-size: $font-size-paragraph-second;
+        text-align: center;
+    }
+
 
     &__image-container{
         @include grid-extension(0,0,4,10);
         @include change-size(auto,750px);
+        
         
         figure{
             max-height: 100%;
