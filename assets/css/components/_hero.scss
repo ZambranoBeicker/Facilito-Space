@@ -19,18 +19,20 @@
     
     &__description{
         @include grid-extension(0,0,1,4);
-        @include grid(0,0,1fr,3);
+        @include grid(0,0,1fr,4);
     }
 
 
     &__title{
         font-size: $font-size-title;
+        margin-top: 10px;
+        margin-bottom: 0;
     }
 
 
     &__paragraph{
         font-size: $font-size-paragraph-second;
-        text-align: center;
+        @include marPad(true,true);
     }
 
 
