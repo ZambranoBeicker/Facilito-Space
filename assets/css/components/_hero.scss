@@ -16,5 +16,25 @@
         
     }
 
+
+    &__image-container{
+        @include grid-extension(0,0,4,10);
+        @include change-size(auto,750px);
+        
+        figure{
+            max-height: 100%;
+            max-width: 100%;
+            @include marPad(true,true);
+
+        }
+
+    }
+
+
+    &__image{
+        max-height: inherit;
+        max-width: inherit;
+    }
+
 }
 
