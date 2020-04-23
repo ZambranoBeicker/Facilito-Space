@@ -4,14 +4,14 @@
     
     &__container{
         
-        @include change-size(70vh,auto);
+        @include change-size(120vh,auto);
         
         
     }
     
     
     &__main-area{
-        @include change-size(inherit,auto);
+        @include change-size(inherit,inherit);
 
         // margin-top: 2rem;
         margin-bottom: 2rem;
@@ -21,7 +21,7 @@
     
     
     &__description{
-        @include change-size(inherit,inherit);
+        @include change-size(50%,inherit);
         margin-left: 1.3em;
         margin-right: 1.3em;
         @include flex(space-between,wrap);
@@ -76,10 +76,7 @@
     
     &__image-container{
         margin-left: 1.3em;
-        margin-right: 1.3em;
-        
-        // @include change-size(auto,auto);
-        
+        margin-right: 1.3em;        
         
         figure{
             max-height: 100%;
@@ -109,18 +106,20 @@
             
             
         }
-    
+        
         
         &__main-area{
+            @include change-size(auto,auto);
             margin-top: 2rem;
             margin-bottom: 2rem;
             @include grid(1fr,9,0,0);
             
             
         }
-    
+        
         
         &__description{
+            @include change-size(auto,auto);
             @include marPad(true,true);
             @include grid-extension(0,0,1,4);
             @include grid(0,0,1fr,4);
