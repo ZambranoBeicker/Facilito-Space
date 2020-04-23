@@ -1,34 +1,40 @@
 @import '../base/_base-index.scss';
 
 .header{
-    background: $background-second;
-    color: $color-undefined;
+    background: $background-first;
+    color: $color-paragraph;
     @include marPad(true,true);
     @include grid(1fr,12,0,0);
 
-}
 
-.header__title{
-    font-size: $font-size-subtitle-first;
-    @include marPad(true,10px);
-    @include grid-extension(0,0,1,4);
-}
-
-.header__menu{
-    font-size: $font-size-paragraph-first;
-    @include change-size(25px, auto);
-    @include grid-extension(0,0,9,13);
-    
-    .header__list{
-        list-style-type: none;
-        @include marPad(true, true);
-        margin-top:26px;
-        @include flex(space-evenly,false);
-        // @extend .header__menu;
+    &__title{
+        font-size: $font-size-subtitle-first;
+        @include marPad(true,true);
+        @include grid-extension(0,0,2,5);
     }
-    
-    .header__li li{
-        margin-right: 15px;
 
+    
+    &__menu{
+        font-size: $font-size-paragraph-first;
+        // @include change-size(28px, auto);
+        @include grid-extension(0,0,9,13);
+    
+        
     }
-}
+
+
+        &__list{
+            list-style-type: none;
+            @include marPad(true, true);
+            margin-top: .6em;
+            @include flex(space-evenly,false);
+            // @extend .header__menu;
+        }
+        
+
+        &__li li{
+            margin-right: 15px;
+    
+        }
+    }
+
