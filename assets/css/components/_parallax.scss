@@ -1,0 +1,5 @@
+@import '../base/base-index';
+
+.parallax{
+    @include parallax('../../public/images/ter_fil.jpg');
+}
