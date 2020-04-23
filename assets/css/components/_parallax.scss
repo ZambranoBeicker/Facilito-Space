@@ -1,5 +1,13 @@
 @import '../base/base-index';
 
 .parallax{
-    @include parallax('../../public/images/ter_fil.jpg');
+    
+    &__background{
+        min-height: 400px;
+        background-position: center;
+        background-size: cover;
+        @include parallax('../../public/images/ter_fil.jpg');
+        @include position(absolute,0,0,none,none);
+        @include change-size(70%,100%);
+    }
 }
