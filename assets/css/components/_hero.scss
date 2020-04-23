@@ -106,18 +106,20 @@
             
             
         }
-    
+        
         
         &__main-area{
+            @include change-size(auto,auto);
             margin-top: 2rem;
             margin-bottom: 2rem;
             @include grid(1fr,9,0,0);
             
             
         }
-    
+        
         
         &__description{
+            @include change-size(auto,auto);
             @include marPad(true,true);
             @include grid-extension(0,0,1,4);
             @include grid(0,0,1fr,4);
