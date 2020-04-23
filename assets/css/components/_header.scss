@@ -10,7 +10,7 @@
     &__title{
         font-size: $font-size-subtitle-first;
         @include marPad(true,true);
-        margin-left: .7em;
+        margin-left: 10%;
         @include grid-extension(0,0,1,2);
     }
 
