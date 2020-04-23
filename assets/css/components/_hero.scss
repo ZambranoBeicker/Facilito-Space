@@ -1,45 +1,55 @@
 .hero{
-    @include grid(1fr,12,0,0);
-
+    // display: grid;
+    // grid-template-rows: 1fr,1.5fr,1fr;
+    
     &__container{
-        @include grid-extension(0,0,2,12);
+        
+        @include change-size(70vh,auto);
         
         
     }
-
+    
     
     &__main-area{
-        @include grid(1fr,9,0,0);
-        margin-top: 30px;
-        margin-bottom: 30px;
+        @include change-size(inherit,auto);
+
+        // margin-top: 2rem;
+        margin-bottom: 2rem;
         
         
     }
-
+    
     
     &__description{
-        @include grid-extension(0,0,1,4);
-        @include grid(0,0,1fr,4);
+        @include change-size(inherit,inherit);
+        margin-left: 1.3em;
+        margin-right: 1.3em;
+        @include flex(space-between,wrap);
+        flex-direction: column;
+        margin-bottom: 2rem;
+        // display: grid;
+        // grid-template-rows: .5fr,.5fr,.5fr,.5fr;
+        
     }
-
-
+    
+    
     &__title{
-        font-size: $font-size-title;
+        font-size: 3.4em;
         margin-top: 10px;
         margin-bottom: 0;
     }
-
-
+    
+    
     &__paragraph{
         font-size: $font-size-paragraph-second;
-        line-height: 1.5em;
+        line-height: 2em;
         @include marPad(true,true);
     }
-
+    
     &__btn-container{
-        @include flex(flex-start,false);
+        @include flex(center,false);
     }
-
+    
     &__btn{
         display: inline-block;
         text-decoration: none;
@@ -52,36 +62,114 @@
         @include change-size(1.8em,6em);
         @include border(true,2px,30px,$background-second);
         transition: .5s;
-
-
+        
+        
         &:hover{
             content: "";
             background-color: $background-first;
             color: $color-paragraph;
-            border: $color-paragraph;
+            @include border(true,2px,30px,$color-paragraph);
+            // border: 2px $color-paragraph;
         }
     }
-
-
+    
+    
     &__image-container{
-        @include grid-extension(0,0,4,10);
-        @include change-size(auto,750px);
+        margin-left: 1.3em;
+        margin-right: 1.3em;
+        
+        // @include change-size(auto,auto);
         
         
         figure{
             max-height: 100%;
             max-width: 100%;
             @include marPad(true,true);
-
+            
         }
-
+        
     }
 
-
+    
     &__image{
         max-height: inherit;
         max-width: inherit;
     }
-
+    
 }
 
+
+@media screen and (min-width:990px){
+    .hero{
+        @include grid(1fr,12,0,0);
+    
+        &__container{
+            @include change-size(auto,auto);
+            @include grid-extension(0,0,2,12);
+            
+            
+        }
+    
+        
+        &__main-area{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            @include grid(1fr,9,0,0);
+            
+            
+        }
+    
+        
+        &__description{
+            @include marPad(true,true);
+            @include grid-extension(0,0,1,4);
+            @include grid(0,0,1fr,4);
+        }
+    
+    
+        &__title{
+            font-size: $font-size-title;
+            @include marPad(true,true);
+        }
+    
+    
+        &__paragraph{
+            font-size: $font-size-paragraph-second;
+            line-height: 1.5em;
+            @include marPad(true,true);
+        }
+    
+        &__btn-container{
+            position: relative;
+        }
+
+        &__btn{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        &__image-container{
+            @include grid-extension(0,0,4,10);
+            @include change-size(auto,750px);
+            
+            
+            figure{
+                max-height: 100%;
+                max-width: 100%;
+                @include marPad(true,true);
+    
+            }
+    
+        }
+    
+    
+        &__image{
+            max-height: inherit;
+            max-width: inherit;
+        }
+    
+    }
+    
+        
+}
