@@ -32,11 +32,9 @@
         list-style-type: none;
         position: relative;
         top: 10%;
-            left: 42%;
-            @include marPad(true, true);
-            margin-top: .6em;
-            // @include flex(space-evenly,false);
-            // @extend .header__menu;
+        left: 42%;
+        @include marPad(true, true);
+        margin-top: .6em;
         }
         
         
@@ -66,7 +64,7 @@
         
         &__menu{
             @include grid-extension(0,0,9,13);
-            position: relative;
+            position: static;
         
             
         }
@@ -76,10 +74,12 @@
                 @include marPad(true, true);
                 margin-top: .6em;
                 @include flex(space-evenly,false);
+                position: static;
             }
             
     
             &__li li{
+                @include marPad(true,true);
                 margin-right: 15px;
         
             }
