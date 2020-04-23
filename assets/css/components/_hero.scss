@@ -35,6 +35,32 @@
         @include marPad(true,true);
     }
 
+    &__btn-container{
+        @include flex(flex-start,false);
+    }
+
+    &__btn{
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        font-size: $font-size-paragraph-first;
+        background-color: $color-paragraph;
+        color: $background-first;
+        padding-top: .35em;
+        @include change-size(1.8em,6em);
+        @include border(true,2px,30px,$background-second);
+        transition: .5s;
+
+
+        &:hover{
+            content: "";
+            background-color: $background-first;
+            color: $color-paragraph;
+            border: $color-paragraph;
+        }
+    }
+
 
     &__image-container{
         @include grid-extension(0,0,4,10);
