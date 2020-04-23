@@ -3,7 +3,7 @@
     width: $width;
 }
 
-@mixin absolute($position,$left,$right,$bottom,$top) {
+@mixin position($position,$left,$right,$bottom,$top) {
     position: $position;
     right: $right;
     left: $left;

@@ -4,37 +4,86 @@
     background: $background-first;
     color: $color-paragraph;
     @include marPad(true,true);
-    @include grid(1fr,12,0,0);
+    @include grid(1fr,2,0,0);
 
 
     &__title{
         font-size: $font-size-subtitle-first;
         @include marPad(true,true);
-        @include grid-extension(0,0,2,5);
+        margin-left: .7em;
+        @include grid-extension(0,0,1,2);
     }
 
     
     &__menu{
         font-size: $font-size-paragraph-first;
-        // @include change-size(28px, auto);
-        @include grid-extension(0,0,9,13);
-    
+        background: $background-first;
+        // margin-right: -150%;
+        // @include position(fixed,0,0,0,0);
+        position: fixed;
+        left: 100%;
+        @include grid-extension(0,0,2,3);
+        
         
     }
-
-
-        &__list{
-            list-style-type: none;
+    
+    
+    &__list{
+        list-style-type: none;
+        position: relative;
+        top: 10%;
+            left: 42%;
             @include marPad(true, true);
             margin-top: .6em;
-            @include flex(space-evenly,false);
+            // @include flex(space-evenly,false);
             // @extend .header__menu;
         }
         
-
+        
         &__li li{
-            margin-right: 15px;
-    
+            margin-top: 1em;
+            
         }
     }
+    
+    .is-active{
+        @include position(fixed,0,0,0,0);
+        
+    }
+    
+    
+@media screen and (min-width:990px){
+
+    .header{
+        @include grid(1fr,12,0,0);
+    
+    
+        &__title{
+            @include marPad(true,true);
+            @include grid-extension(0,0,2,5);
+        }
+    
+        
+        &__menu{
+            @include grid-extension(0,0,9,13);
+            position: relative;
+        
+            
+        }
+    
+    
+            &__list{
+                @include marPad(true, true);
+                margin-top: .6em;
+                @include flex(space-evenly,false);
+            }
+            
+    
+            &__li li{
+                margin-right: 15px;
+        
+            }
+        }
+
+}
 
