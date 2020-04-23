@@ -32,6 +32,7 @@
 
     &__paragraph{
         font-size: $font-size-paragraph-second;
+        line-height: 1.5em;
         @include marPad(true,true);
     }
 
