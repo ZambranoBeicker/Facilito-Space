@@ -75,3 +75,8 @@ border: $px solid $color;
 
 
 }
+
+@mixin parallax($url) {
+    background-attachment: fixed;
+    background-image: url($url);
+}
