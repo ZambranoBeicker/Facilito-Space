@@ -1,6 +1,8 @@
 @import '../base/base-index';
 
 .parallax{
+
+    min-height: 100vh;
     
     &__background{
         min-height: 400px;
