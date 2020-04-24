@@ -1,1 +1,37 @@
 @import '../base/_base-index.scss';
+
+
+.products{
+    min-height: 100vh;
+
+    &__slider{
+        color: $color-paragraph;
+    }
+    
+    &__description{
+        @include marPad(90px 0 90px 0, 5.5% 8% 5.5% 8%);
+        background: $background-first;
+        @include change-size(60%,auto);
+
+
+        &-text{
+            text-align: right;
+            padding-right: 40%;
+            position: relative;
+        }   
+
+        & p{
+            font-size: $font-size-paragraph-second;
+            line-height: 1.5em;
+
+        }
+
+    }
+
+
+
+    #products__title{
+        font-size: $font-size-subtitle-first;
+
+    }
+}
