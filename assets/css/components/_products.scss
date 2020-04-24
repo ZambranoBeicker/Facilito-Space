@@ -1,0 +1,101 @@
+@import '../base/_base-index.scss';
+
+
+.products{
+    min-height: 100vh;
+    
+    &__slider{
+        color: $color-paragraph;
+        min-height: inherit;
+    }
+    
+    &__description{
+        @include marPad(90px 5.7% 90px 5.7%, 5.5% 4% 5.5% 4%);
+        background: $background-first;
+        @include change-size(60%,auto);
+
+
+        &-text{
+            text-align: right;
+            padding-right: 40%;
+            position: relative;
+        }   
+
+        & p{
+            font-size: $font-size-paragraph-second;
+            line-height: 1.5em;
+            
+        }
+        
+    }
+    
+    
+    
+    #products__title{
+        font-size: $font-size-subtitle-first;
+        
+    }
+
+    
+    & figure{
+        @include marPad(30px 0 30px 0,true);
+    }
+
+    &__image{
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width:990px){
+    .products{
+
+        &__slider{
+        // @include change-size(100vh,auto);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        @include grid(1fr,12,0,0);
+        
+        
+    }
+    
+    
+    &__description{
+        @include change-size(auto,auto);
+        // @include marPad(true,true);
+        margin: 0;
+        @include grid-extension(0,0,2,5);
+        // @include grid(0,0,1fr,4);
+
+        
+    }
+    
+    
+    &__title{
+        font-size: $font-size-title;
+        @include marPad(true,true);
+    }
+    
+    &__image-container{
+        @include grid-extension(0,0,5,13);
+        min-height: 100%;
+        // @include change-size(auto,750px);
+        
+        
+        figure{
+            min-height: 100%;
+            min-width: 100%;
+            @include marPad(true,true);
+            
+        }
+        
+    }
+    
+    
+    &__image{
+        min-height: inherit;
+        min-width: inherit;
+    }
+
+}
+
+}
