@@ -9,7 +9,7 @@
     }
     
     &__description{
-        @include marPad(90px 0 90px 0, 5.5% 8% 5.5% 8%);
+        @include marPad(90px 5.7% 90px 5.7%, 5.5% 4% 5.5% 4%);
         background: $background-first;
         @include change-size(60%,auto);
 
@@ -23,15 +23,24 @@
         & p{
             font-size: $font-size-paragraph-second;
             line-height: 1.5em;
-
+            
         }
-
+        
     }
-
-
-
+    
+    
+    
     #products__title{
         font-size: $font-size-subtitle-first;
+        
+    }
 
+    
+    & figure{
+        @include marPad(30px 0 30px 0,true);
+    }
+
+    &__image{
+        max-width: 100%;
     }
 }
