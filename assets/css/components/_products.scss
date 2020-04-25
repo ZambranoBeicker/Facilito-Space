@@ -10,17 +10,27 @@
     }
     
     &__description{
-        @include marPad(90px 5.7% 90px 5.7%, 5.5% 4% 5.5% 4%);
+        @include marPad(90px 5.7% 0 5.7%, 5.5% 4% 5.5% 4%);
         background: $background-first;
+        transform: translateY(80px);
         @include change-size(60%,auto);
-
-
+        
+        
         &-text{
             text-align: right;
             padding-right: 40%;
             position: relative;
-        }   
+            // color: white;
 
+
+            &:after{
+                content: '';
+                @include change-size(3px,130px);
+                @include position(absolute,none,0,none,.7em);
+                background-color: currentColor;
+            }
+        }   
+        
         & p{
             font-size: $font-size-paragraph-second;
             line-height: 1.5em;
@@ -35,12 +45,12 @@
         font-size: $font-size-subtitle-first;
         
     }
-
+    
     
     & figure{
         @include marPad(30px 0 30px 0,true);
     }
-
+    
     &__image{
         max-width: 100%;
     }
@@ -48,28 +58,34 @@
 
 @media screen and (min-width:990px){
     .products{
-
+        
         &__slider{
-        // @include change-size(100vh,auto);
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        @include grid(1fr,12,0,0);
+            // @include change-size(100vh,auto);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            @include grid(1fr,12,0,0);
+            
+            
+        }
         
-        
-    }
-    
-    
-    &__description{
-        @include change-size(auto,auto);
-        // @include marPad(true,true);
-        margin: 0;
-        @include grid-extension(0,0,2,5);
-        // @include grid(0,0,1fr,4);
+        &__description-container{
+            @include grid-extension(0,0,2,5);
 
+        }
+
+
+        &__description{
+            // @include change-size(auto,auto);
+            min-height: 50%;
+            margin: 0;
+            transform: translateX(80px);
+            // @include grid(0,0,1fr,4);
+            
+
+            
+        }
         
-    }
-    
-    
+        
     &__title{
         font-size: $font-size-title;
         @include marPad(true,true);
