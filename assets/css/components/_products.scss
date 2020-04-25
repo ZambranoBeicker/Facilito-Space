@@ -8,6 +8,27 @@
         color: $color-paragraph;
         min-height: inherit;
     }
+
+    &__arrows-container{
+        text-align: right;
+        max-height: 50px;
+        // align-items: ;
+        @include flex(space-around,none);
+        
+        .left{
+            transform: rotateZ(180deg);
+        }
+
+        .products__arrows{
+            max-height: 50px;
+            margin-left:50px ;
+
+            &:hover{
+                content: '';
+                opacity: .5;
+            }
+        }
+    }
     
     &__description{
         @include marPad(90px 5.7% 0 5.7%, 5.5% 4% 5.5% 4%);
