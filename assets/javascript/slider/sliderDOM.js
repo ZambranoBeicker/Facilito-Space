@@ -4,6 +4,8 @@ const $textContainer = document.getElementById('text-container')
 const $title = document.getElementById('products__title')
 const $par = document.getElementById('products__text')
 const $image = document.getElementById('image')
+const $arr1 = document.getElementById('arr1')
+const $arr2 = document.getElementById('arr2')
 
 const slider = new Slider({
     elements: [
@@ -45,3 +47,14 @@ const slider = new Slider({
 })
 
 slider.play()
+
+$arr1.addEventListener('click',()=>{
+    slider.stop()
+    slider.prev()
+    slider.play()
+})
+$arr2.addEventListener('click',()=>{
+    slider.stop()
+    slider.next()
+    slider.play()
+})
