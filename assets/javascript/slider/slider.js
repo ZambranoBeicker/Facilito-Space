@@ -22,4 +22,24 @@ export default class Slider{
 
     }
 
+    play(){
+        this.interval = setInterval(()=>{
+            this.next()
+        },1000)
+    }
+
+    stop(){
+        clearInterval(this.interval)
+    }
+
 }
+
+let slider = new Slider({
+    elements: [0,1,2,3,4,5,6,7,8,9],
+    animationFunc: undefined,
+})
+
+slider.play()
+setTimeout(function(){
+    slider.stop()
+},10000)
