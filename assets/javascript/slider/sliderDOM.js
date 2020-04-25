@@ -1,5 +1,6 @@
 import Slider from './slider.js';
 
+const $textContainer = document.getElementById('text-container')
 const $title = document.getElementById('products__title')
 const $par = document.getElementById('products__text')
 const $image = document.getElementById('image')
@@ -28,9 +29,17 @@ const slider = new Slider({
         }
     ],
     animationFunc: function(elements){
-        $title.innerText = elements.title
-        $par.innerText = elements.par
-        $image.src = elements.image
+        $textContainer.classList.add('hide')
+        $image.classList.add('hide')
+        setTimeout(()=>{
+            
+            $title.innerText = elements.title
+            $par.innerText = elements.par
+            $image.src = elements.image
+
+            $textContainer.classList.remove('hide')
+            $image.classList.remove('hide')
+        },600)
 
     }
 })
