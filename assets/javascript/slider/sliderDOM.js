@@ -1,4 +1,6 @@
 import Slider from './slider.js';
+import sliderElements from './sliderElements.js';
+
 
 const $textContainer = document.getElementById('text-container')
 const $title = document.getElementById('products__title')
@@ -8,28 +10,7 @@ const $arr1 = document.getElementById('arr1')
 const $arr2 = document.getElementById('arr2')
 
 const slider = new Slider({
-    elements: [
-        {
-            title: "Lorem ipsum consectetur",
-            par:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. At earum asperiores perspiciatis placeat, ex magni numquam quo veritatis nihil adipisci possimus quisquam',
-            image: '../public/images/cu_fil.jpg',
-        },
-        {
-            title: "Lorem ipsum",
-            par:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. At earum asperiores perspiciatis placeat, ex magni numquam quo veritatis nihil adipisci possimus quisquam,ipsam magnam molestiae maiores iusto deleniti. Qui, repellendus',
-            image: '../public/images/ci_fil.jpg',
-        },
-        {
-            title: "Lorem ipsum dolor",
-            par:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. At earum asperiores perspiciatis placeat, ex magni numquam quo veritatis nihil adipisci possimus quisquam',
-            image: '../public/images/se_fil.jpg',
-        },
-        {
-            title: "Lorem ipsum adipisicing",
-            par:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. At earum asperiores perspiciatis placeat, ex magni numquam quo veritatis nihil adipisci possimus quisquam,ipsam magnam molestiae maiores iusto deleniti. Qui, repellendus',
-            image: '../public/images/ter_fil.jpg',
-        }
-    ],
+    elements: [...sliderElements],
     animationFunc: function(elements){
         $textContainer.classList.add('hide')
         $image.classList.add('hide')
