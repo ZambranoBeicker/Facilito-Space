@@ -1,5 +1,7 @@
 import Slider from './slider.js';
 import sliderElements from './sliderElements.js';
+import Preloader from '../preloadImage/prelodader.js';
+import elements from './sliderElements.js';
 
 
 const $textContainer = document.getElementById('text-container')
@@ -39,3 +41,12 @@ $arr2.addEventListener('click',()=>{
     slider.next()
     slider.play()
 })
+
+ const images = elements.map((items)=>items.image)
+
+Preloader.preloadImages({
+    path:images,
+    completed: function(){
+        console.log('loaded')
+    }
+});
