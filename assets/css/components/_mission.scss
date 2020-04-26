@@ -1,0 +1,106 @@
+.hero--mission{
+    
+    &__container{
+        
+        // @include change-size(120vh,auto);
+        @extend .hero__container;
+        
+        
+    }
+    
+    
+    &__main-area{
+        @extend .hero__main-area;
+        // @include change-size(inherit,inherit);
+    }
+    
+    
+    &__description{
+        @extend .hero__description;        
+        
+    }
+    
+    
+    &__title{
+        @extend .hero__title;
+    }
+    
+    
+    &__paragraph{
+        @extend .hero__paragraph;
+    }
+    
+    
+    &__image-container{
+        @extend .hero__image-container;
+        
+        
+        figure{
+            max-height: 100%;
+            max-width: 100%;
+            @include marPad(true,true);
+            
+        }
+        
+    }
+
+    
+    &__image{
+        @extend .hero__image;
+    }
+    
+}
+
+
+@media screen and (min-width:990px){
+    .hero--mission{
+        // @include grid(1fr,12,0,0);
+        @extend .hero;
+    
+        &__container{
+        
+            // @include change-size(120vh,auto);
+            @extend .hero__container;
+            
+            
+        }
+        
+        
+        &__main-area{
+            @extend .hero__main-area;
+            // @include change-size(inherit,inherit);
+        }
+        
+        
+        &__description{
+            @extend .hero__description;        
+            
+        }
+        
+        
+        &__title{
+            @extend .hero__title;
+        }
+        
+        
+        &__paragraph{
+            @extend .hero__paragraph;
+        }
+    
+        &__btn-container{
+            @extend .hero__btn-container;
+        }
+
+        &__btn{
+            @extend .hero__btn;
+        }
+
+        &__image-container{
+            @extend .hero__image-container;
+    
+        }
+    
+    }
+    
+        
+}
