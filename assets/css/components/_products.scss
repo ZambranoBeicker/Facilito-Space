@@ -11,18 +11,23 @@
 
     &__arrows-container{
         text-align: right;
-        max-height: 50px;
+        height: 50px;
+        position: relative;
         // align-items: ;
-        @include flex(space-around,none);
+        @include flex(center,none);
         
         .left{
             transform: rotateZ(180deg);
+            @include position(absolute,18%,none,none,none);
+        }
+        .right{
+            // transform: rotateZ(180deg);
+            @include position(absolute,none,22%,none,none);
         }
 
         .products__arrows{
             max-height: 50px;
-            margin-left:50px ;
-
+            // margin-left:50px ;
             &:hover{
                 content: '';
                 opacity: .5;
@@ -31,21 +36,20 @@
     }
     
     &__description{
-        @include marPad(90px 5.7% 0 5.7%, 5.5% 4% 5.5% 4%);
+        @include marPad(0 5.7% 0 5.7%, 5.5% 4% 5.5% 4%);
         background: $background-first;
-        transform: translateY(80px);
-        @include change-size(60%,auto);
-        position: relative;
+        transform: translateY(40px);
         z-index: 10;
+        @include change-size(60%,auto);
         
         
         &-text{
             text-align: right;
-            padding-right: 40%;
+            padding-right: 45%;
             position: relative;
             // color: white;
 
-
+            
             &:after{
                 content: '';
                 @include change-size(3px,130px);
@@ -71,7 +75,7 @@
     
     
     & figure{
-        @include marPad(30px 0 30px 0,true);
+        @include marPad(true,true);
     }
     
     &__image{
@@ -108,20 +112,41 @@
             
         }
         
+        
+        &__arrows-container{
+            text-align: right;
+            position: relative;
+            left: 80px;
+            width: 80%;
+            max-height: 50px;
+            // align-items: ;
+            @include flex(space-around,none);
+            
+            
+        }
+        
+
         &__description-container{
             @include grid-extension(0,0,2,5);
+            position: relative;
 
+
+         &:nth-child(1){
+             content: '';
+
+         }   
         }
-
-
+        
+        
         &__description{
             // @include change-size(auto,auto);
+            @include marPad(90px 5.7% 0 5.7%, 5.5% 4% 5.5% 4%);
             min-height: 50%;
             margin: 0;
             transform: translateX(80px);
             // @include grid(0,0,1fr,4);
             
-
+            
             
         }
         
