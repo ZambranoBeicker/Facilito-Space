@@ -28,6 +28,19 @@
     
     &__paragraph{
         @extend .hero__paragraph;
+        position: relative;
+
+        &.top{
+
+            &::after{
+                content: '';
+                @include change-size(5px,70%);
+                background: black;
+                @include position(absolute,none,-1.7em,0,none);
+                z-index: -1;
+
+            }
+        }
     }
     
     
@@ -78,7 +91,7 @@
             @include change-size(auto,auto);
             @include marPad(true,true);
             @include grid-extension(0,0,1,4);
-            @include grid(0,0,1fr,4);
+            grid-template-rows: .5fr 1fr 1fr;
         }
     
     
@@ -92,6 +105,12 @@
             font-size: $font-size-paragraph-second;
             line-height: 1.5em;
             @include marPad(true,true);
+
+            &.top{
+                &:after{
+                    bottom:-1.5em;
+                }
+            }
         }
 
         &__image-container{
