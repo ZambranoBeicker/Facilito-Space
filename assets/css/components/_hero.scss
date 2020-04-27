@@ -21,7 +21,7 @@
     
     
     &__description{
-        @include change-size(50%,inherit);
+        @include change-size(60%,inherit);
         margin-left: 1.3em;
         margin-right: 1.3em;
         @include flex(space-between,wrap);
