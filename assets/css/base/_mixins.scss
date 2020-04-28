@@ -1,82 +1,80 @@
-@mixin change-size($height,$width) {
-    height: $height;
-    width: $width;
+@mixin change-size($height, $width) {
+  height: $height;
+  width: $width;
 }
 
-@mixin position($position,$left,$right,$bottom,$top) {
-    position: $position;
-    right: $right;
-    left: $left;
-    top: $top;
-    bottom: $bottom;
+@mixin position($position, $left, $right, $bottom, $top) {
+  position: $position;
+  right: $right;
+  left: $left;
+  top: $top;
+  bottom: $bottom;
 }
 
-@mixin margin($left,$right,$top,$bottom) {
-    margin-top: $top;
-    margin-bottom: $bottom;
-    margin-right: $right;
-    margin-left: $left;
+@mixin margin($left, $right, $top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+  margin-right: $right;
+  margin-left: $left;
 }
 
-@mixin border($value,$px,$rpx,$color) {
-border: $px solid $color;
-    @if $value {
-        border-radius: $rpx;
-    }
+@mixin border($value, $px, $rpx, $color) {
+  border: $px solid $color;
+  @if $value {
+    border-radius: $rpx;
+  }
 }
 
-@mixin font($family,$size,$color) {
-    font-size: $size;
-    font-family: $family;
-    color: $color;
+@mixin font($family, $size, $color) {
+  font-size: $size;
+  font-family: $family;
+  color: $color;
 }
 
-@mixin flex($justify,$wrap) {
-    display: flex;
-    justify-content: $justify;
+@mixin flex($justify, $wrap) {
+  display: flex;
+  justify-content: $justify;
 
-    @if $wrap==true {
-        flex-wrap: wrap;
-    }
+  @if $wrap==true {
+    flex-wrap: wrap;
+  }
 }
 
-@mixin grid($c-size,$c-num,$r-size,$r-num) {
-    display: grid;
-    grid-template-columns: repeat($c-num,$c-size);
-    grid-template-rows: repeat($r-num,$r-size);
+@mixin grid($c-size, $c-num, $r-size, $r-num) {
+  display: grid;
+  grid-template-columns: repeat($c-num, $c-size);
+  grid-template-rows: repeat($r-num, $r-size);
 }
 
-@mixin grid-extension($r-init,$r-end,$c-init,$c-end) {
-    grid-row-sart:$r-init;
-    grid-row-end:$r-end;
-    grid-column-start:$c-init;
-    grid-column-end:$c-end;
+@mixin grid-extension($r-init, $r-end, $c-init, $c-end) {
+  grid-row-sart: $r-init;
+  grid-row-end: $r-end;
+  grid-column-start: $c-init;
+  grid-column-end: $c-end;
 }
 
-@mixin padding($left,$right,$top,$bottom) {
-    padding-top: $top;
-    padding-bottom: $bottom;
-    padding-right: $right;
-    padding-left: $left;   
+@mixin padding($left, $right, $top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+  padding-right: $right;
+  padding-left: $left;
 }
 
 @mixin marPad($margin, $padding) {
-    @if $margin==true {
-        margin: 0;
-    }@else{
-        margin: $margin;
-    }
+  @if $margin==true {
+    margin: 0;
+  } @else {
+    margin: $margin;
+  }
 
-    @if $padding==true{
-        padding: 0;
-    }@else{
-        padding: $padding;
-    }
-
-
+  @if $padding==true {
+    padding: 0;
+  } @else {
+    padding: $padding;
+  }
 }
 
 @mixin parallax($url) {
-    background-attachment: fixed;
-    background-image: url($url);
+  background-attachment: fixed;
+  background-image: url($url);
 }
