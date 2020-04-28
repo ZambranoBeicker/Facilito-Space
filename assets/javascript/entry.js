@@ -1,3 +1,2 @@
-import '../css/main.scss';
-import './slider/sliderDOM.js';
-
+import "../css/main.scss";
+import "./slider/sliderDOM.js";

@@ -1,139 +1,104 @@
-.hero--mission{
-    
-    &__container{
-        
-        // @include change-size(120vh,auto);
-        @extend .hero__container;
-        
-        
-    }
-    
-    
-    &__main-area{
-        @extend .hero__main-area;
-        // @include change-size(inherit,inherit);
-    }
-    
-    
-    &__description{
-        @extend .hero__description;        
-        
-    }
-    
-    
-    &__title{
-        @extend .hero__title;
-    }
-    
-    
-    &__paragraph{
-        @extend .hero__paragraph;
-        position: relative;
+.hero--mission {
+  &__container {
+    @extend .hero__container;
+  }
 
-        &.top{
+  &__main-area {
+    @extend .hero__main-area;
+  }
 
-            &::after{
-                content: '';
-                @include change-size(5px,70%);
-                background: black;
-                @include position(absolute,none,-1.7em,0,none);
-                z-index: -1;
+  &__description {
+    @extend .hero__description;
+  }
 
-            }
-        }
-    }
-    
-    
-    &__image-container{
-        @extend .hero__image-container;
-        
-        
-        figure{
-            max-height: 100%;
-            max-width: 100%;
-            @include marPad(true,true);
-            
-        }
-        
-    }
+  &__title {
+    @extend .hero__title;
+  }
 
-    
-    &__image{
-        @extend .hero__image;
+  &__paragraph {
+    @extend .hero__paragraph;
+    position: relative;
+
+    &.top {
+      &::after {
+        content: "";
+        @include change-size(5px, 70%);
+        background: black;
+        @include position(absolute, none, -1.7em, 0, none);
+        z-index: -1;
+      }
     }
-    
+  }
+
+  &__image-container {
+    @extend .hero__image-container;
+
+    figure {
+      max-height: 100%;
+      max-width: 100%;
+      @include marPad(true, true);
+    }
+  }
+
+  &__image {
+    @extend .hero__image;
+  }
 }
 
+@media screen and (min-width: 990px) {
+  .hero--mission {
+    @include grid(1fr, 12, 0, 0);
 
-@media screen and (min-width:990px){
-    .hero--mission{
-        @include grid(1fr,12,0,0);
-    
-        &__container{
-            @include change-size(auto,auto);
-            @include grid-extension(0,0,2,12);
-            
-            
-        }
-        
-        
-        &__main-area{
-            @include change-size(auto,auto);
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            @include grid(1fr,9,0,0);
-            
-            
-        }
-        
-        
-        &__description{
-            @include change-size(auto,auto);
-            @include marPad(true,true);
-            @include grid-extension(0,0,1,4);
-            grid-template-rows: .5fr 1fr 1fr;
-        }
-    
-    
-        &__title{
-            font-size: $font-size-title;
-            @include marPad(true,true);
-        }
-    
-    
-        &__paragraph{
-            font-size: $font-size-paragraph-second;
-            line-height: 1.5em;
-            @include marPad(true,true);
-
-            &.top{
-                &:after{
-                    bottom:-1.5em;
-                }
-            }
-        }
-
-        &__image-container{
-            @include grid-extension(0,0,4,10);
-            @include change-size(auto,750px);
-            
-            
-            figure{
-                max-height: 100%;
-                max-width: 100%;
-                @include marPad(true,true);
-    
-            }
-    
-        }
-    
-    
-        &__image{
-            max-height: inherit;
-            max-width: inherit;
-        }
-    
+    &__container {
+      @include change-size(auto, auto);
+      @include grid-extension(0, 0, 2, 12);
     }
-    
-        
+
+    &__main-area {
+      @include change-size(auto, auto);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      @include grid(1fr, 9, 0, 0);
+    }
+
+    &__description {
+      @include change-size(auto, auto);
+      @include marPad(true, true);
+      @include grid-extension(0, 0, 1, 4);
+      grid-template-rows: 0.5fr 1fr 1fr;
+    }
+
+    &__title {
+      font-size: $font-size-title;
+      @include marPad(true, true);
+    }
+
+    &__paragraph {
+      font-size: $font-size-paragraph-second;
+      line-height: 1.5em;
+      @include marPad(true, true);
+
+      &.top {
+        &:after {
+          bottom: -1.5em;
+        }
+      }
+    }
+
+    &__image-container {
+      @include grid-extension(0, 0, 4, 10);
+      @include change-size(auto, 750px);
+
+      figure {
+        max-height: 100%;
+        max-width: 100%;
+        @include marPad(true, true);
+      }
+    }
+
+    &__image {
+      max-height: inherit;
+      max-width: inherit;
+    }
+  }
 }

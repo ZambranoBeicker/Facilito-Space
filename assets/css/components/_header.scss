@@ -1,89 +1,69 @@
-@import '../base/_base-index.scss';
+@import "../base/_base-index.scss";
 
-.header{
+.header {
+  background: $background-first;
+  color: $color-paragraph;
+  @include marPad(true, true);
+  @include grid(1fr, 2, 0, 0);
+
+  &__title {
+    font-size: $font-size-subtitle-first;
+    @include marPad(true, true);
+    margin-left: 10%;
+    @include grid-extension(0, 0, 1, 2);
+  }
+
+  &__menu {
+    font-size: $font-size-paragraph-first;
     background: $background-first;
-    color: $color-paragraph;
-    @include marPad(true,true);
-    @include grid(1fr,2,0,0);
 
+    position: fixed;
+    left: 100%;
+    @include grid-extension(0, 0, 2, 3);
+  }
 
-    &__title{
-        font-size: $font-size-subtitle-first;
-        @include marPad(true,true);
-        margin-left: 10%;
-        @include grid-extension(0,0,1,2);
-    }
+  &__list {
+    list-style-type: none;
+    position: relative;
+    top: 10%;
+    left: 42%;
+    @include marPad(true, true);
+    margin-top: 0.6em;
+  }
 
-    
-    &__menu{
-        font-size: $font-size-paragraph-first;
-        background: $background-first;
-        // margin-right: -150%;
-        // @include position(fixed,0,0,0,0);
-        position: fixed;
-        left: 100%;
-        @include grid-extension(0,0,2,3);
-        
-        
-    }
-    
-    
-    &__list{
-        list-style-type: none;
-        position: relative;
-        top: 10%;
-        left: 42%;
-        @include marPad(true, true);
-        margin-top: .6em;
-        }
-        
-        
-        &__li li{
-            margin-top: 1em;
-            
-        }
-    }
-    
-    .is-active{
-        @include position(fixed,0,0,0,0);
-        
-    }
-    
-    
-@media screen and (min-width:990px){
-
-    .header{
-        @include grid(1fr,12,0,0);
-    
-    
-        &__title{
-            @include marPad(true,true);
-            @include grid-extension(0,0,2,5);
-        }
-    
-        
-        &__menu{
-            @include grid-extension(0,0,9,13);
-            position: static;
-        
-            
-        }
-    
-    
-            &__list{
-                @include marPad(true, true);
-                margin-top: .6em;
-                @include flex(space-evenly,false);
-                position: static;
-            }
-            
-    
-            &__li li{
-                @include marPad(true,true);
-                margin-right: 15px;
-        
-            }
-        }
-
+  &__li li {
+    margin-top: 1em;
+  }
 }
 
+.is-active {
+  @include position(fixed, 0, 0, 0, 0);
+}
+
+@media screen and (min-width: 990px) {
+  .header {
+    @include grid(1fr, 12, 0, 0);
+
+    &__title {
+      @include marPad(true, true);
+      @include grid-extension(0, 0, 2, 5);
+    }
+
+    &__menu {
+      @include grid-extension(0, 0, 9, 13);
+      position: static;
+    }
+
+    &__list {
+      @include marPad(true, true);
+      margin-top: 0.6em;
+      @include flex(space-evenly, false);
+      position: static;
+    }
+
+    &__li li {
+      @include marPad(true, true);
+      margin-right: 15px;
+    }
+  }
+}
