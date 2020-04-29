@@ -55,11 +55,38 @@ const countChilds = ($element) => {
   return $element.childElementCount;
 };
 const $companyTitle = document.getElementById("companyTitle");
+const $helpTitle = document.getElementById("helpTitle");
+const $linksTitle = document.getElementById("linksTitle");
+const $productTitle = document.getElementById("productTitle");
+
+const buttons = [
+  {
+    title: $companyTitle,
+    child: $companyBtn,
+  },
+  {
+    title: $helpTitle,
+    child: $helpBtn,
+  },
+  {
+    title: $linksTitle,
+    child: $linkBtn,
+  },
+  {
+    title: $productTitle,
+    child: $productBtn,
+  },
+];
 
 hasResolutionChange("(min-width:450px)", (matches) => {
-  if (matches) {
-    $companyTitle.removeChild($companyBtn);
-  } else {
-    $companyTitle.appendChild($companyBtn);
+  for (let i = 0; i < 4; i++) {
+    if (matches) {
+      const textContent = buttons[i].child.textContent;
+      buttons[i].child.remove()
+      buttons[i].title.innerHTML = textContent;
+    } else {
+      buttons[i].title.textContent = ''
+      buttons[i].title.appendChild(buttons[i].child);
+    }
   }
 });
