@@ -1,3 +1,5 @@
+import hasResolutionChange from "./mediaQuery.js";
+
 const $companyBtn = document.getElementById("companyBtn");
 const $productBtn = document.getElementById("productBtn");
 const $helpBtn = document.getElementById("helpBtn");
@@ -48,3 +50,4 @@ $linkBtn.addEventListener("click", () => {
     console.log(elem.classList);
   }
 });
+
