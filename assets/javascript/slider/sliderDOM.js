@@ -43,7 +43,5 @@ const images = elements.map((items) => items.image);
 
 Preloader.preloadImages({
   path: images,
-  completed: function () {
-    console.log("loaded");
-  },
+  completed: function () {},
 });

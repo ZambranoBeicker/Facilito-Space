@@ -6,7 +6,6 @@ export default class Preloader {
     });
 
     Promise.all(promises).then(completed);
-    console.log("this is the onload:\n" + promises.resolve);
   }
 
   static preloadImage({ imagePath }) {
@@ -14,7 +13,6 @@ export default class Preloader {
       const image = new Image();
       image.src = imagePath;
       image.onload = resolve;
-      console.log(`This is my log:\n ${image.onload}\n${resolve}`);
     });
   }
 }
