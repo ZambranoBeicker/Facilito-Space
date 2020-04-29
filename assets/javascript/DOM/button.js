@@ -51,3 +51,7 @@ $linkBtn.addEventListener("click", () => {
   }
 });
 
+hasResolutionChange('(min-width:480px)',()=>{
+  console.log(true)
+})
+

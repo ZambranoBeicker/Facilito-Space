@@ -1,7 +1,9 @@
 
 const hasResolutionChange = (resolution, action)=>{ 
-    matchMedia(`${resolution}`).addEventListener('change', ()=>{
-        action()
+    matchMedia(`${resolution}`).addEventListener('change', (e)=>{
+        if(e.matches){
+            action()
+        }
     })
 }
-export default hasResolutionChange 
+export default hasResolutionChange
