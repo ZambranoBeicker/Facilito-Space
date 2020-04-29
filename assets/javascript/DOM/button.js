@@ -55,3 +55,19 @@ hasResolutionChange('(min-width:480px)',()=>{
   console.log(true)
 })
 
+// const countChilds = ($element)=>{
+//   return $element.childElementCount;
+// }
+// const $companyTitle = document.getElementById('companyTitle') 
+
+
+// hasResolutionChange('(min-width:450px)',()=>{
+//   console.log('Antes de la función: ' + countChilds($companyTitle))
+//   if(countChilds($companyTitle) === 1){
+//     $companyTitle.removeChild($companyBtn)
+//   }else{
+//     $companyTitle.appendChild($companyBtn)
+    
+//   }
+//   console.log('Después de la función: ' + countChilds($companyTitle))
+
