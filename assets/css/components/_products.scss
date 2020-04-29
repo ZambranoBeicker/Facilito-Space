@@ -12,34 +12,19 @@
     text-align: right;
     height: 50px;
     position: relative;
-<<<<<<< HEAD
 
     @include flex(center, none);
 
-=======
-    // align-items: ;
-    @include flex(center, none);
-
->>>>>>> @{-1}
     .left {
       transform: rotateZ(180deg);
       @include position(absolute, 18%, none, none, none);
     }
     .right {
-<<<<<<< HEAD
-=======
-      // transform: rotateZ(180deg);
->>>>>>> @{-1}
       @include position(absolute, none, 22%, none, none);
     }
 
     .products__arrows {
       max-height: 50px;
-<<<<<<< HEAD
-
-=======
-      // margin-left:50px ;
->>>>>>> @{-1}
       &:hover {
         content: "";
         opacity: 0.5;
