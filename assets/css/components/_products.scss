@@ -12,7 +12,6 @@
     text-align: right;
     height: 50px;
     position: relative;
-
     @include flex(center, none);
 
     .left {
@@ -37,8 +36,8 @@
     background: $background-first;
     transform: translateY(40px);
     z-index: 10;
-    @include change-size(60%, auto);
-
+    min-height: 50%;
+    width: auto;
     &-text {
       text-align: right;
       padding-right: 45%;
@@ -46,7 +45,7 @@
 
       &:after {
         content: "";
-        @include change-size(3px, 130px);
+        @include change-size(3px, 38%);
         @include position(absolute, none, 0, none, 0.7em);
         background-color: currentColor;
       }
@@ -101,6 +100,8 @@
       width: 80%;
       max-height: 50px;
       @include flex(space-around, none);
+      @include marPad(12px,true);
+
     }
 
     &__description-container {
@@ -114,7 +115,6 @@
 
     &__description {
       @include marPad(90px 5.7% 0 5.7%, 5.5% 4% 5.5% 4%);
-      min-height: 50%;
       margin: 0;
       transform: translateX(80px);
     }
