@@ -5,7 +5,7 @@
   color: $color-paragraph;
 
   &__nav {
-    @include marPad(true, 10% 5.7% 10% 5.7%);
+    @include marPad(true, 5% 5.7% 5% 5.7%);
   }
 
   .header__title--footer {
@@ -97,6 +97,10 @@
         font-weight: 500;
         @include marPad(10px 0 0 0, 0);
       }
+
     }
+          &__company{
+              margin-left: 0;
+          }
   }
 }
