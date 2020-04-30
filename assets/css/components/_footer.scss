@@ -58,8 +58,8 @@
       display: block;
     }
 
-    &__main-content{
-        @include flex(space-between,wrap);
+    &__main-content {
+      @include flex(space-between, wrap);
     }
 
     &__liks,
@@ -70,7 +70,32 @@
         font-size: $font-size-paragraph-first;
         font-weight: 500;
         @include marPad(10px 0 0 0, 0);
+      }
+    }
+  }
+}
 
+@media screen and (min-width: 450px) {
+  .footer {
+    &__list {
+      display: block;
+    }
+
+    &__main-content {
+      @include flex(space-between, true);
+    }
+
+    &__links,
+    &__company,
+    &__product,
+    &__help {
+      @include marPad(0 22px 0 22px, true);
+      flex-shrink: 0;
+
+      &-Title {
+        font-size: $font-size-paragraph-first;
+        font-weight: 500;
+        @include marPad(10px 0 0 0, 0);
       }
     }
   }
