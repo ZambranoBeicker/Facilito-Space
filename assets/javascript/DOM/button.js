@@ -1,4 +1,4 @@
-import ResolutionChange from "./mediaQuery.js";
+import hasResolutionChange from "./mediaQuery.js";
 
 const $companyBtn = document.getElementById("companyBtn");
 const $productBtn = document.getElementById("productBtn");
@@ -78,26 +78,15 @@ const buttons = [
   },
 ];
 
-// window.addEventListener('load', ()=>{
-//   if(window.innerWidth > 450){
-//     for (let i = 0; i < 4; i++) {
-//       buttons[i].title.children[0].remove()
-//     }
-//   }
-// })
-
-ResolutionChange.hasResolutionChange(450, (matches) => {
-  for (let i=0;i<4;i++) {
-    
-
+hasResolutionChange(450, (matches) => {
+  for (let i = 0; i < 4; i++) {
     if (matches) {
       const textContent = buttons[i].child.textContent;
-      buttons[i].child.remove()
+      buttons[i].child.remove();
       buttons[i].title.innerHTML = textContent;
     } else {
-      buttons[i].title.textContent = ''
+      buttons[i].title.textContent = "";
       buttons[i].title.appendChild(buttons[i].child);
     }
-
-}
-})
+  }
+});

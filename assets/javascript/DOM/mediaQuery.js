@@ -1,22 +1,13 @@
-const ResolutionChange = {
-
-hasResolutionChange: (resolution, actionChange)=>{ 
+const hasResolutionChange = (resolution, action)=>{ 
     window.addEventListener('load',()=>{
             if(window.innerWidth > resolution){
                 
-                actionChange(window.innerWidth > resolution)
+                action(window.innerWidth > resolution)
             }
     })
-},
 
-removeFirstChild: ($element)=>{
-    if($element.children[0]){
-        $element.children[0].remove()
-    }else{
-        console.log('Nada de nada')
-    }
+    matchMedia(`(min-width:${resolution}px)`).addEventListener('change',(e)=>{
+        action(e.matches)
+    })
 }
-
-}
-
-export default ResolutionChange
+export default hasResolutionChange
