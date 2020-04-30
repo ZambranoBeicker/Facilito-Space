@@ -1,10 +1,11 @@
 @import "../base/_base-index.scss";
 
 .header {
-  background: $background-first;
+  background: $background-second;
   color: $color-paragraph;
   @include marPad(true, true);
   @include grid(1fr, 2, 0, 0);
+  position: relative;
 
   &__title {
     font-size: $font-size-subtitle-first;
@@ -38,6 +39,17 @@
 
 .is-active {
   @include position(fixed, 0, 0, 0, 0);
+}
+
+  figure{
+  position: absolute;
+  @include marPad(true,true);
+  right: 10px;
+
+  img{
+    max-width: 50px;
+    max-height: 50px;
+  }
 }
 
 @media screen and (min-width: 990px) {
