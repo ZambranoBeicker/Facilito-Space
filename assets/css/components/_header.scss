@@ -17,10 +17,10 @@
   &__menu {
     font-size: $font-size-paragraph-first;
     background: $background-first;
-
+    transition: 0.1s;
     position: fixed;
     left: 100%;
-    @include grid-extension(0, 0, 2, 3);
+    @include change-size(100%, 100%);
   }
 
   &__list {
@@ -41,12 +41,12 @@
   @include position(fixed, 0, 0, 0, 0);
 }
 
-  figure{
+figure {
   position: absolute;
-  @include marPad(true,true);
+  @include marPad(true, true);
   right: 10px;
 
-  img{
+  img {
     max-width: 50px;
     max-height: 50px;
   }
