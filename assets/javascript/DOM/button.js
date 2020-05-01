@@ -1,4 +1,5 @@
 import hasResolutionChange from "./mediaQuery.js";
+import showMenuItems from "./burgerMenu.js";
 
 const $companyBtn = document.getElementById("companyBtn");
 const $productBtn = document.getElementById("productBtn");
@@ -77,6 +78,18 @@ const buttons = [
     child: $productBtn,
   },
 ];
+
+const $burgerMenu = document.getElementById("burger");
+const $headerMenu = document.getElementById("menu");
+
+showMenuItems($burgerMenu, (isPair) => {
+  if (isPair) {
+    $headerMenu.style.left = "0";
+    console.log($headerMenu.style.left);
+  } else {
+    $headerMenu.style.left = "100%";
+  }
+});
 
 hasResolutionChange(450, (matches) => {
   for (let i = 0; i < 4; i++) {
