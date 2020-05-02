@@ -1,26 +1,24 @@
 {
-  "name": "stories-two",
+  "name": "stories",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --open --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "style-loader": "^1.2.1",
-    "webpack": "^4.43.0",
+    "css-loader": "^3.5.2",
+    "html-webpack-plugin": "^4.2.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.4",
+    "webpack": "^4.42.1",
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "-": "0.0.1",
-    "css-loader": "^3.5.3",
-    "g": "^2.0.1",
-    "html-webpack-plugin": "^4.3.0",
-    "node-sass": "^4.14.0",
-    "sass-loader": "^8.0.2",
     "webpack-cli": "^3.3.11"
   }
 }
