@@ -1,0 +1,106 @@
+@import "../base/_base-index";
+
+.footer {
+  background: $background-first;
+  color: $color-paragraph;
+
+  &__nav {
+    @include marPad(true, 5% 5.7% 5% 5.7%);
+  }
+
+  .header__title--footer {
+    @extend .header__title;
+    @include marPad(0 0 0.5em 0, true);
+  }
+
+  &__btn {
+    @extend .footer;
+    position: relative;
+    text-align: left;
+    font-family: $font-paragraphs;
+    font-size: $font-size-paragraph-first;
+    font-weight: 500;
+    border: none;
+    @include change-size(50px, 100%);
+    @include marPad(10px 0 0 0, 0);
+
+    &:after {
+      content: "";
+      background: $color-paragraph;
+      @include change-size(2px, 15px);
+      position: absolute;
+      right: 10%;
+      bottom: 40%;
+    }
+  }
+
+  &__list {
+    display: none;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__li {
+    & h3 {
+      @include marPad(true, 16px 0 0 0);
+      font-weight: 400;
+    }
+  }
+}
+
+.btn-active {
+  display: block;
+}
+
+@media screen and (min-width: 820px) {
+  .footer {
+    &__list {
+      display: block;
+    }
+
+    &__main-content {
+      @include flex(space-between, wrap);
+    }
+
+    &__liks,
+    &__company,
+    &__product,
+    &__help {
+      &-Title {
+        font-size: $font-size-paragraph-first;
+        font-weight: 500;
+        @include marPad(10px 0 0 0, 0);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .footer {
+    &__list {
+      display: block;
+    }
+
+    &__main-content {
+      @include flex(space-between, true);
+    }
+
+    &__links,
+    &__company,
+    &__product,
+    &__help {
+      @include marPad(0 22px 0 22px, true);
+      flex-shrink: 0;
+
+      &-Title {
+        font-size: $font-size-paragraph-first;
+        font-weight: 500;
+        @include marPad(10px 0 0 0, 0);
+      }
+
+    }
+          &__company{
+              margin-left: 0;
+          }
+  }
+}

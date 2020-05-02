@@ -1,0 +1,143 @@
+@import "../base/_base-index.scss";
+
+.products {
+  min-height: 100vh;
+
+  &__slider {
+    color: $color-paragraph;
+    min-height: inherit;
+  }
+
+  &__arrows-container {
+    text-align: right;
+    height: 50px;
+    position: relative;
+    @include flex(center, none);
+
+    .left {
+      transform: rotateZ(180deg);
+      @include position(absolute, 18%, none, none, none);
+    }
+    .right {
+      @include position(absolute, none, 22%, none, none);
+    }
+
+    .products__arrows {
+      max-height: 50px;
+      &:hover {
+        content: "";
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__description {
+    @include marPad(0 5.7% 0 5.7%, 5.5% 4% 5.5% 4%);
+    background: $background-first;
+    transform: translateY(40px);
+    z-index: 10;
+    min-height: 50%;
+    width: auto;
+    &-text {
+      text-align: right;
+      padding-right: 45%;
+      position: relative;
+
+      &:after {
+        content: "";
+        @include change-size(3px, 38%);
+        @include position(absolute, none, 0, none, 0.7em);
+        background-color: currentColor;
+      }
+    }
+
+    & p {
+      font-size: $font-size-paragraph-second;
+      line-height: 1.5em;
+    }
+  }
+
+  #products__title {
+    font-size: $font-size-subtitle-first;
+  }
+
+  & figure {
+    @include marPad(true, true);
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+}
+
+#text-container {
+  transition: 0.6s ease-out;
+  &.hide {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+#image {
+  transition: 0.6s ease-out;
+  &.hide {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .products {
+    &__slider {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      @include grid(1fr, 12, 0, 0);
+    }
+
+    &__arrows-container {
+      text-align: right;
+      position: relative;
+      left: 80px;
+      width: 80%;
+      max-height: 50px;
+      @include flex(space-around, none);
+      @include marPad(12px,true);
+
+    }
+
+    &__description-container {
+      @include grid-extension(0, 0, 2, 5);
+      position: relative;
+
+      &:nth-child(1) {
+        content: "";
+      }
+    }
+
+    &__description {
+      @include marPad(90px 5.7% 0 5.7%, 5.5% 4% 5.5% 4%);
+      margin: 0;
+      transform: translateX(80px);
+    }
+
+    &__title {
+      font-size: $font-size-title;
+      @include marPad(true, true);
+    }
+
+    &__image-container {
+      @include grid-extension(0, 0, 5, 13);
+      min-height: 100%;
+
+      figure {
+        min-height: 100%;
+        min-width: 100%;
+        @include marPad(true, true);
+      }
+    }
+
+    &__image {
+      min-height: inherit;
+      min-width: inherit;
+    }
+  }
+}

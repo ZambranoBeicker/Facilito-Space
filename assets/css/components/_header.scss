@@ -1,0 +1,81 @@
+@import "../base/_base-index.scss";
+
+.header {
+  background: $background-second;
+  color: $color-paragraph;
+  @include marPad(true, true);
+  @include grid(1fr, 2, 0, 0);
+  position: relative;
+
+  &__title {
+    font-size: $font-size-subtitle-first;
+    @include marPad(true, true);
+    margin-left: 10%;
+    @include grid-extension(0, 0, 1, 2);
+  }
+
+  &__menu {
+    font-size: $font-size-paragraph-first;
+    background: $background-first;
+    transition: 0.1s;
+    position: fixed;
+    left: 100%;
+    @include change-size(100%, 100%);
+  }
+
+  &__list {
+    list-style-type: none;
+    position: relative;
+    top: 10%;
+    left: 42%;
+    @include marPad(true, true);
+    margin-top: 0.6em;
+  }
+
+  &__li li {
+    margin-top: 1em;
+  }
+}
+
+.is-active {
+  @include position(fixed, 0, 0, 0, 0);
+}
+
+figure {
+  position: absolute;
+  @include marPad(true, true);
+  right: 10px;
+
+  img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .header {
+    @include grid(1fr, 12, 0, 0);
+
+    &__title {
+      @include marPad(true, true);
+      @include grid-extension(0, 0, 2, 5);
+    }
+
+    &__menu {
+      @include grid-extension(0, 0, 9, 13);
+      position: static;
+    }
+
+    &__list {
+      @include marPad(true, true);
+      margin-top: 0.6em;
+      @include flex(space-evenly, false);
+      position: static;
+    }
+
+    &__li li {
+      @include marPad(true, true);
+      margin-right: 15px;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.hero--mission {
+  height: auto;
+  min-height: 100vh;
+  &__container {
+    @extend .hero__container;
+    min-height: 100%;
+    height:auto;
+  }
+
+  &__main-area {
+    @extend .hero__main-area;
+    min-height: inherit;
+  }
+
+  &__description {
+    @extend .hero__description;
+  }
+
+  &__title {
+    @extend .hero__title;
+  }
+
+  &__paragraph-container{
+    min-height: 170px;
+
+  }
+
+  &__paragraph {
+    @extend .hero__paragraph;
+    margin-bottom: 20px;
+    position: relative;
+
+    &.top {
+      &::after {
+        content: "";
+        @include change-size(5px, 60%);
+        background: black;
+        @include position(absolute, none, 0, -6%, none);
+        z-index: -1;
+      }
+    }
+  }
+
+  &__image-container {
+    @extend .hero__image-container;
+
+    figure {
+      max-height: 100%;
+      max-width: 100%;
+      @include marPad(true, true);
+    }
+  }
+
+  &__image {
+    @extend .hero__image;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .hero--mission {
+    @include grid(1fr, 12, 0, 0);
+    
+    &__container {
+      @include change-size(auto, auto);
+      @include grid-extension(0, 0, 2, 12);
+    }
+    
+    &__main-area {
+      @include change-size(auto, auto);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      @include grid(1fr, 9, 0, 0);
+    }
+    
+    &__description {
+      @include change-size(auto, auto);
+      @include marPad(true, true);
+      @include grid-extension(0, 0, 1, 4);
+      grid-template-rows: 0.5fr 1fr 1fr;
+    }
+    
+    &__title {
+      font-size: $font-size-title;
+      @include marPad(true, true);
+    }
+    
+    &__paragraph {
+      font-size: $font-size-paragraph-second;
+      line-height: 1.5em;
+      @include marPad(true, true);
+      
+      &.top {
+        &:after {
+          bottom: -1.5em;
+        }
+      }
+    }
+
+    &__image-container {
+      @include grid-extension(0, 0, 4, 10);
+      max-width: 670px;
+      figure {
+        max-height: 100%;
+        max-width: inherit;
+        @include marPad(true, true);
+      }
+    }
+
+    &__image {
+      max-height: inherit;
+      max-width: inherit;
+    }
+  }
+}

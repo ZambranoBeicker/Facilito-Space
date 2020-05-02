@@ -1,0 +1,135 @@
+.hero {
+  &__container {
+    @include change-size(120vh, auto);
+  }
+
+  &__main-area {
+    @include change-size(inherit, inherit);
+
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    @include change-size(60%, inherit);
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+    @include flex(space-between, wrap);
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 3.4em;
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+
+  &__paragraph {
+    font-size: $font-size-paragraph-second;
+    line-height: 2em;
+    @include marPad(0 0 16px 0, true);
+  }
+
+  &__btn-container {
+    @include flex(center, false);
+  }
+
+  &__btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: $font-size-paragraph-first;
+    background-color: $color-paragraph;
+    color: $background-first;
+    padding-top: 0.35em;
+    @include change-size(1.8em, 6em);
+    @include border(true, 2px, 30px, $background-second);
+    transition: 0.5s;
+
+    &:hover {
+      content: "";
+      background-color: $background-first;
+      color: $color-paragraph;
+      @include border(true, 2px, 30px, $color-paragraph);
+    }
+  }
+
+  &__image-container {
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+    height: auto;
+    max-width: 750px;
+
+    figure {
+      max-height: 100%;
+      max-width: 100%;
+      @include marPad(true, true);
+    }
+  }
+
+  &__image {
+    max-height: inherit;
+    max-width: inherit;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .hero {
+    @include grid(1fr, 12, 0, 0);
+
+    &__container {
+      @include change-size(auto, auto);
+      @include grid-extension(0, 0, 2, 12);
+    }
+
+    &__main-area {
+      @include change-size(auto, auto);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      @include grid(1fr, 9, 0, 0);
+    }
+
+    &__description {
+      @include change-size(auto, auto);
+      @include marPad(true, true);
+      @include grid-extension(0, 0, 1, 4);
+      // @include grid(0, 0, 1fr, 4);
+      display: grid;
+      grid-template-rows: .7fr 1fr 1fr .6fr;
+    }
+
+    &__title {
+      font-size: $font-size-title;
+    }
+
+    &__paragraph {
+      font-size: $font-size-paragraph-second;
+      line-height: 1.5em;
+    }
+
+    &__btn-container {
+      position: relative;
+    }
+
+    &__btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &__image-container {
+      @include grid-extension(0, 0, 4, 10);
+      figure {
+        max-height: 100%;
+        max-width: 100%;
+        @include marPad(true, true);
+      }
+    }
+
+    &__image {
+      max-height: inherit;
+      max-width: inherit;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../base/base-index";
+
+.parallax {
+  min-height: 100vh;
+
+  &__background {
+    min-height: 400px;
+    background-position: center;
+    background-size: cover;
+    @include parallax("../../public/images/ter_fil.jpg");
+    @include position(absolute, 0, 0, none, none);
+    @include change-size(70%, 100%);
+  }
+
+  &__text {
+    background: $background-first;
+    color: $color-paragraph;
+
+    @include position(absolute, 0, 0, 8%, none);
+  }
+
+  &__title {
+    font-size: $font-size-subtitle-first - 16px;
+  }
+
+  &__pagraph {
+    font-size: $font-size-paragraph-second;
+  }
+}
