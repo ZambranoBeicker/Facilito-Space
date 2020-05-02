@@ -62,11 +62,13 @@
   }
 
   & figure {
+    position: static;
     @include marPad(true, true);
   }
 
   &__image {
     max-width: 100%;
+    max-height: 100%;
   }
 }
 
@@ -100,8 +102,7 @@
       width: 80%;
       max-height: 50px;
       @include flex(space-around, none);
-      @include marPad(12px,true);
-
+      @include marPad(12px, true);
     }
 
     &__description-container {
@@ -129,15 +130,12 @@
       min-height: 100%;
 
       figure {
-        min-height: 100%;
+        // min-height: 100%;
         min-width: 100%;
+        min-height: 100%;
+
         @include marPad(true, true);
       }
-    }
-
-    &__image {
-      min-height: inherit;
-      min-width: inherit;
     }
   }
 }
