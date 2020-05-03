@@ -1,7 +1,7 @@
 @import "../base/_base-index.scss";
 
 .header {
-  background: $background-second;
+  background: $background-first;
   color: $color-paragraph;
   @include marPad(true, true);
   @include grid(1fr, 2, 0, 0);
@@ -83,5 +83,9 @@
       @include marPad(true, true);
       margin-right: 15px;
     }
+  }
+
+  .fas{
+    display: none;
   }
 }
