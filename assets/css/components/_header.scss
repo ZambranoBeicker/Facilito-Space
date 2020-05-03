@@ -35,22 +35,28 @@
   &__li li {
     margin-top: 1em;
   }
-}
-
-.is-active {
+  
+  .is-active {
   @include position(fixed, 0, 0, 0, 0);
 }
 
-figure {
-  position: absolute;
-  @include marPad(true, true);
-  right: 10px;
+// figure {
+//   position: absolute;
+//   @include marPad(true, true);
+//   right: 10px;
+.font-container{
+    position: absolute;
+    color: $color-paragraph;
+    font-size: 48px;
+    right: 0;
+    @include marPad(true,true);
+    @include change-size(50px,50px);
+  
+    // .fas{
 
-  img {
-    max-width: 50px;
-    max-height: 50px;
+    // }
   }
-}
+  }
 
 @media screen and (min-width: 990px) {
   .header {
